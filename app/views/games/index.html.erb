@@ -22,8 +22,10 @@
         <td><%= link_to "Download", rails_blob_path(game.cover.cover_photo), disposition: "attachment" %></td>
         <td>
           <ul>
-            <% game.piece.pieces_photos.each do |p| %>
-              <li><%= image_tag p.variant(resize: "100x100", colorspace: "gray").processed %> </li>
+            <% game.pieces.each do |piece| %>
+              <% piece.pieces_photos.each do |p| %>
+                <li><%= image_tag p.variant(resize: "100x100", colorspace: "gray").processed %> </li>
+              <% end %>
             <% end %>
           </ul>
         </td>

@@ -68,3 +68,5 @@ gem 'figaro'
 gem "aws-sdk-s3", "~> 1.111"
 
 gem 'activestorage-validator'
+
+gem 'rails-erd'
